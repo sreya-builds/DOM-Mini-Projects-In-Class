@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237, 216, 100);
+}
+#card{
+  height: 450px;
+  width: 300px;
+  background-color: #ffff;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+#card img{
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+#card h1{
+  font-family: 'Merienda',sans-serif;
+}
+#card h5{
+    font-size: 30px;
+    font-family:'Merienda',sans-serif;
+    margin: 20px;
+}
+
+.btn-container button{
+  background-color: khaki;
+  border: none;
+  height: 50px;
+  width: 60%;
+  border-radius: 20px;
+  font-family: 'Merienda',sans-serif;
+  font-size: 15px;
+  font-weight:bold;
+  cursor: pointer;
+}
+.btn-container #add{
+    background-color: green;
+    color: white;
+}

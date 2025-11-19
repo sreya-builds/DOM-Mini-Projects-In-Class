@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cursor{
+    height: 34px;
+    width: 40px;
+    background-color: white;
+    mix-blend-mode:difference;
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear 0.2s;
+}
+h1{
+ font-size: 6vw;
+ font-weight: 900;
+}

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #111;
+}
+.elem{
+    height: 100px;
+    width: 100%;
+    border-bottom:3px solid #fff ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.elem h1{
+    font-size: 5.5vw;
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
+
+}
+.elem img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30%;
+    position: absolute;
+    opacity: 0;
+    transition: all linear 0.3s;
+   
+}
