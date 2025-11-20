@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(127, 223, 255);
+  }
+.cards{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  perspective: 1000px;
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
+  animation:  float 3s ease-in-out infinite alternate;
+  
+}
+.card1,.card2,.card3{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+  flex-direction: column;
+  width: 300px;
+ height: 420px;
+ background-color: black;
+ border-radius: 20px;
+ position: relative;
+}
+.card1{
+  margin-top: 20%;
+}
+.card2{
+  margin-bottom: 20%;
+}
+
+.card1 img{
+  cursor: pointer;
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+.card2 img{
+  cursor: pointer;
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+.card3 img{
+  cursor: pointer;
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+h2{
+  font-size: 30px;
+  line-height: 2.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cards i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0) rotate(60deg);
+  font-size: 80px;
+  opacity:0.6;
+  background-image: url('data:image/jpeg;base64,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');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+   color: transparent;
+ transition: all cubic-bezier(.37,1.22,.35,.24) 0.8s;
+
+}
+@keyframes float {
+  0% { 
+    transform: translateY(0px);
+   }
+  50% { 
+    transform: translateY(55px); 
+  }
+  100% { 
+    transform: translateY(20px); 
+  }
+}
