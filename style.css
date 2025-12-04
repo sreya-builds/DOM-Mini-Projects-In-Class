@@ -10,6 +10,10 @@ html, body {
   background-color: rgba(132, 168, 31, 0.963);
   overflow: hidden;
 }
+h1{
+    text-align: center;
+    align-items: center;
+}
 .btn-container {
     display: flex;
     flex-wrap: wrap;
