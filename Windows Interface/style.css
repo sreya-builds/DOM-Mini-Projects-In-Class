@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://4kwallpapers.com/images/wallpapers/radha-krishna-2560x1440-14416.png');
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+main {
+  height: 100vh;   
+  width: 100%;
+  position: relative;
+}
+.icons {
+    position: fixed;   
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.icon-box img {
+    width: 70px;
+    height: 65px;
+}
+
+.icon-box p {
+    justify-self: center;
+    margin: 7px;
+    font-size: 14px;
+    color: white;
+}
+.icon-box:hover{
+    transform: translateY(-10px);
+}
+
+.taskbar{
+    width: 100%;
+    height: 55px;
+    background-color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0 20px;
+}
+.search-button{
+    width:15%;
+    height: 50%;
+    border-radius: 30px;
+    display: flex;
+    background-color: rgb(209, 193, 200);
+}
+.search-button i{
+    position: absolute;
+    padding: 3px 10px;
+    font-size: 20px;
+}
+.start-btn img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.task-icons img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.task-icons img.special-img {
+    width: 30px;
+}
+.time-area {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    text-align: right;
+    color: black;
+    font-size: 14px;
+}
+#custom-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    background: rgba(255, 255, 255, 0.351);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 9999;
+}
+#custom-menu ul{
+    list-style: none;
+    width: 100%;
+}
+#custom-menu ul li {
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    font-family: monospace;
+    transition: 0.3s;
+}
+
+#custom-menu ul li:hover {
+    background: #e2e2e2;
+}
+.start-menu {
+    position: fixed;
+    bottom: 65px;
+    left: 20px;
+    width: 330px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    display: none;
+    z-index: 99999;
+}
+
+.start-search input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.4);
+    outline: none;
+    font-size: 14px;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.app-box {
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.app-box img {
+    width: 50px;
+}
+
+.app-box:hover {
+    transform: translateY(-5px);
+}
+
+.power-section {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.power-section i {
+    font-size: 22px;
+}
