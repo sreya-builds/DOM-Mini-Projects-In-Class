@@ -1,0 +1,152 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top, #2c2f36, #0e0f13);
+}
+
+/* ===== SYNTH PANEL ===== */
+.synth{
+  width:720px;
+  padding:25px;
+  background: linear-gradient(180deg,#2a2d34,#14161b);
+  border-radius:22px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.85),
+    inset 0 1px 1px rgba(255,255,255,0.08);
+}
+
+/* ===== TOP CONTROLS ===== */
+.controls{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.knob-group h4{
+  font-size:12px;
+  letter-spacing:1.5px;
+  color:#9fa3ad;
+  margin-bottom:10px;
+}
+
+.knobs{
+  display:flex;
+  gap:18px;
+}
+
+/* ===== KNOBS ===== */
+.knob{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 30%, #3c3f46, #0e0f13);
+  box-shadow:
+    inset -2px -4px 4px rgba(255,255,255,0.05),
+    inset 2px 2px 6px rgba(0,0,0,0.9),
+    0 6px 14px rgba(0,0,0,0.8);
+  position:relative;
+}
+
+.knob::after{
+  content:'';
+  position:absolute;
+  top:7px;
+  left:50%;
+  width:2px;
+  height:12px;
+  background:#f1f1f1;
+  transform:translateX(-50%);
+  border-radius:2px;
+}
+
+/* ===== PIANO BASE ===== */
+.piano{
+  position:relative;
+  display:flex;
+  padding:18px 12px 18px 18px; 
+  /* top right bottom left */
+  background:#0b0c0f;
+  border-radius:28px;
+  box-shadow: inset 0 0 14px rgba(0,0,0,0.95);
+}
+
+
+/* ===== WHITE KEYS ===== */
+.key.white{
+  width:78px;
+  height:230px;
+  background: linear-gradient(#e6e9f0,#bcc1cb);
+  margin:0 2px;
+  border-radius:0 0 14px 14px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  padding-bottom:8px;
+  font-size:20px;
+  font-weight:600;
+  color:#1e1f23;
+  cursor:pointer;
+  box-shadow:
+    inset 0 -4px 6px rgba(0,0,0,0.35),
+    0 6px 10px rgba(0,0,0,0.6);
+  transition:all 0.12s ease;
+}
+
+/* ===== BLACK KEYS ===== */
+.key.black{
+  position:absolute;
+  width:48px;
+  height:115px;
+  background: linear-gradient(#000,#1a1a1a);
+  top:18px;
+  border-radius:0 0 10px 10px;
+  z-index:10;
+  cursor:pointer;
+  box-shadow:
+    inset 0 -4px 6px rgba(255,255,255,0.06),
+    0 8px 14px rgba(0,0,0,0.9);
+  transition:all 0.1s ease;
+}
+
+/* ===== BLACK KEY POSITIONS ===== */
+.c-sharp{ left:78px; }
+.d-sharp{ left:158px; }
+.f-sharp{ left:318px; }
+.g-sharp{ left:398px; }
+.a-sharp{ left:478px; }
+
+/* ===== ACTIVE / PRESS EFFECT ===== */
+.key.white.active{
+  background:#9fa8da;
+  transform:translateY(4px);
+  box-shadow:
+    inset 0 -2px 4px rgba(0,0,0,0.4);
+}
+
+.key.black.active{
+  background:#ff9800;
+  transform:translateY(3px);
+}
+
+/* ===== HOVER EFFECT ===== */
+.key.white:hover{
+  background:#f1f3f7;
+}
+
+.key.black:hover{
+  background:#222;
+}
+.key.white:last-child{
+  margin-right:0;
+}
